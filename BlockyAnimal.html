@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 2</title>
+    </head>
+
+    <style>
+        #left {
+            float: left;
+            width: 425px;
+        }
+
+        #right {
+            width: 100%;
+        }
+    </style>
+
+    <body onload="main()">
+        <div id="container">
+            <div id="left">
+                <canvas id="webgl" width="400" height="400" style="border:1px solid #abdbe3;">
+                    Please use a browser that supports "canvas"
+                </canvas>
+                
+                <p id="numdot"> ms: -- fps: -- </p>
+                
+                <b>Walk Animation</b>
+                <button type="button" id="animationOnButton">ON</button>
+                <button type="button" id="animationOffButton">OFF</button>
+                <br><br>
+                <b>Animation Speed</b> <input type="range" min="1" max="3" value="1" class="slider" id="speedSlide"><br><br>
+        
+                <b>Shift+Click</b> for <b>Idle Animation</b>
+                <br> Shift+Click again to disable the animation
+                <br><br>
+
+                
+                <b>Camera Controls</b> 
+                <button type="button" id="resetCamButton">Reset Camera</button><br>
+                X Angle <input type="range" min="0" max="360" value="0" class="slider" id="xAngleSlide">
+                <br>
+                Y Angle <input type="range" min="0" max="360" value="0" class="slider" id="yAngleSlide">
+                <br>
+                Z Angle <input type="range" min="0" max="360" value="0" class="slider" id="zAngleSlide">
+                <br><br>
+
+
+                Based on the character model, <b>Sheep</b> from the game <i>Minecraft</i><br>
+                
+            </div>
+            <div id="right">
+                <b>Head</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="HeadXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="HeadYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="HeadZSlide">
+                <br>
+
+                <b>Front Left Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="FrontLeftLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="FrontLeftLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="FrontLeftLegZSlide">
+                <br>
+
+                <b>Bottom Front Left Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="BottomFrontLeftLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="BottomFrontLeftLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="BottomFrontLeftLegZSlide">
+                <br>
+
+                <b>Front Right Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="FrontRightLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="FrontRightLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="FrontRightLegZSlide">
+                <br>
+
+                <b>Bottom Front Right Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="BottomFrontRightLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="BottomFrontRightLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="BottomFrontRightLegZSlide">
+                <br>
+
+                <b>Back Left Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="BackLeftLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="BackLeftLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="BackLeftLegZSlide">
+                <br>
+
+                <b>Bottom Back Left Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="BottomBackLeftLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="BottomBackLeftLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="BottomBackLeftLegZSlide">
+                <br>
+
+                <b>Back Right Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="BackRightLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="BackRightLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="BackRightLegZSlide">
+                <br>
+
+                <b>Bottom Back Right Leg</b> 
+                <br>
+                X <input type="range" min="-45" max="45" value="0" class="slider" id="BottomBackRightLegXSlide">
+                Y <input type="range" min="-45" max="45" value="0" class="slider" id="BottomBackRightLegYSlide">
+                Z <input type="range" min="-45" max="45" value="0" class="slider" id="BottomBackRightLegZSlide">
+                <br>
+
+                <br>
+                <button type="button" id="resetButton">Reset all parts</button><br>
+            </div>
+        </div>
+        <script src="./lib/webgl-utils.js"></script>
+        <script src="./lib/webgl-debug.js"></script>
+        <script src="./lib/cuon-utils.js"></script>
+        <script src="./lib/cuon-matrix.js"></script>
+        <script src="Triangle.js"></script>
+        <script src="Cube.js"></script>
+        <script src="Sphere.js"></script>
+        <script src="drawAnimal.js"></script>
+        <script src="BlockyAnimal.js"></script>
+        <script src="reset.js"></script>
+    </body>
+</html>

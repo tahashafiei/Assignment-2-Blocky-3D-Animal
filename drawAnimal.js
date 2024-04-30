@@ -23,7 +23,7 @@ function drawAnimal() {
     head.matrix.rotate(-HeadYAngle, 0, 1, 0);
     head.matrix.rotate(-HeadZAngle, 0, 0, 1);
     head.matrix.scale(0.35, 0.35, 0.35);
-    head.matrix.translate(-.5, 0.25, -1.25);
+    head.matrix.translate(-.5, 0.25, -0.8);
     head.render();
  
     var face = new Cube();
@@ -32,7 +32,7 @@ function drawAnimal() {
     face.matrix.rotate(-HeadYAngle, 0, 1, 0);
     face.matrix.rotate(-HeadZAngle, 0, 0, 1);
     face.matrix.scale(0.30, 0.30, 0.03);
-    face.matrix.translate(-.5, 0.35, -15.5);
+    face.matrix.translate(-.5, 0.37, -10.4);
     face.render();
  
     var topWool = new Cube();
@@ -41,7 +41,7 @@ function drawAnimal() {
     topWool.matrix.rotate(-HeadYAngle, 0, 1, 0);
     topWool.matrix.rotate(-HeadZAngle, 0, 0, 1);
     topWool.matrix.scale(0.31, 0.071, 0.04);
-    topWool.matrix.translate(-.5, 4.85, -11.95);
+    topWool.matrix.translate(-.5, 4.82, -8.9);
     topWool.render();
  
     var bottomLeftWool = new Cube();
@@ -50,7 +50,7 @@ function drawAnimal() {
     bottomLeftWool.matrix.rotate(-HeadYAngle, 0, 1, 0);
     bottomLeftWool.matrix.rotate(-HeadZAngle, 0, 0, 1);
     bottomLeftWool.matrix.scale(0.05, 0.071, 0.04);
-    bottomLeftWool.matrix.translate(-3.01, 1.5, -11.95);
+    bottomLeftWool.matrix.translate(-3.01, 1.6, -8.9);
     bottomLeftWool.render();
  
     var bottomRightWool = new Cube();
@@ -59,7 +59,7 @@ function drawAnimal() {
     bottomRightWool.matrix.rotate(-HeadYAngle, 0, 1, 0);
     bottomRightWool.matrix.rotate(-HeadZAngle, 0, 0, 1);
     bottomRightWool.matrix.scale(0.05, 0.071, 0.04);
-    bottomRightWool.matrix.translate(2.01, 1.5, -11.95);
+    bottomRightWool.matrix.translate(2.01, 1.6, -8.9);
     bottomRightWool.render();
  
     var leftEye = new Cube();
@@ -68,7 +68,7 @@ function drawAnimal() {
     leftEye.matrix.rotate(-HeadYAngle, 0, 1, 0);
     leftEye.matrix.rotate(-HeadZAngle, 0, 0, 1);
     leftEye.matrix.scale(0.1, 0.061, 0.04);
-    leftEye.matrix.translate(-1.5, 3.5, -11.95);
+    leftEye.matrix.translate(-1.5, 3.7, -8.9);
     leftEye.render();
  
     var leftEyeBlack = new Cube();
@@ -77,7 +77,7 @@ function drawAnimal() {
     leftEyeBlack.matrix.rotate(-HeadYAngle, 0, 1, 0);
     leftEyeBlack.matrix.rotate(-HeadZAngle, 0, 0, 1);
     leftEyeBlack.matrix.scale(0.05, 0.061, 0.04);
-    leftEyeBlack.matrix.translate(-3.001, 3.5, -12);
+    leftEyeBlack.matrix.translate(-3.001, 3.7, -8.95);
     leftEyeBlack.render();
  
     var rightEye = new Cube();
@@ -86,7 +86,7 @@ function drawAnimal() {
     rightEye.matrix.rotate(-HeadYAngle, 0, 1, 0);
     rightEye.matrix.rotate(-HeadZAngle, 0, 0, 1);
     rightEye.matrix.scale(0.1, 0.061, 0.04);
-    rightEye.matrix.translate(0.5, 3.5, -11.95);
+    rightEye.matrix.translate(0.5, 3.7, -8.9);
     rightEye.render();
  
     var rightEyeBlack = new Cube();
@@ -95,7 +95,7 @@ function drawAnimal() {
     rightEyeBlack.matrix.rotate(-HeadYAngle, 0, 1, 0);
     rightEyeBlack.matrix.rotate(-HeadZAngle, 0, 0, 1);
     rightEyeBlack.matrix.scale(0.05, 0.061, 0.04);
-    rightEyeBlack.matrix.translate(2.001, 3.5, -12.05);
+    rightEyeBlack.matrix.translate(2.001, 3.7, -8.95);
     rightEyeBlack.render();
  
     var mouthTop = new Cube();
@@ -104,7 +104,7 @@ function drawAnimal() {
     mouthTop.matrix.rotate(-HeadYAngle, 0, 1, 0);
     mouthTop.matrix.rotate(-HeadZAngle, 0, 0, 1);
     mouthTop.matrix.scale(0.1, 0.071, 0.04);
-    mouthTop.matrix.translate(-0.47, 1.5, -11.95);
+    mouthTop.matrix.translate(-0.47, 1.6, -8.9);
     mouthTop.render()
  
     var mouthBottom = new Cube();
@@ -113,7 +113,7 @@ function drawAnimal() {
     mouthBottom.matrix.rotate(-HeadYAngle, 0, 1, 0);
     mouthBottom.matrix.rotate(-HeadZAngle, 0, 0, 1);
     mouthBottom.matrix.scale(0.1, 0.035, 0.04);
-    mouthBottom.matrix.translate(-0.4701, 3, -12);
+    mouthBottom.matrix.translate(-0.4701, 3.2, -8.95);
     mouthBottom.render()
  
     // Upper legs 
